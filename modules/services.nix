@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  systemd.user.services = { };
+}
