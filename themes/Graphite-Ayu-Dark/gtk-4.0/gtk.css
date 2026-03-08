@@ -1,0 +1,45 @@
+@define-color bg_color #0A0E14;
+@define-color bg_alt   #11151C;
+@define-color fg_color #E6E1CF;
+
+@define-color accent_color #FFB454;
+@define-color border_color #1A1F29;
+@define-color selected_bg_color #59C2FF;
+@define-color selected_fg_color #0A0E14;
+
+window {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+headerbar {
+    background-color: @bg_alt;
+    border-bottom: 1px solid @border_color;
+}
+
+button {
+    background-color: @bg_alt;
+    border-radius: 6px;
+    border: 1px solid @border_color;
+    color: @fg_color;
+}
+
+button:hover {
+    background-color: color-mix(in srgb, @bg_alt 80%, white);
+}
+
+button:active {
+    background-color: @accent_color;
+    color: @bg_color;
+}
+
+entry {
+    background-color: @bg_alt;
+    border-radius: 4px;
+    border: 1px solid @border_color;
+}
+
+selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
