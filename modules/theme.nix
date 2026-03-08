@@ -5,8 +5,8 @@
     enable = true;
 
     theme = {
-      package = pkgs.gruvbox-gtk-theme;
-      name = "Gruvbox-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
+      name = "Breeze-Dark";
     };
 
     iconTheme = {
