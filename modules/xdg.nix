@@ -7,13 +7,14 @@
     enable = true;
     createDirectories = true;
 
-    desktop = "${config.home.homeDirectory}/Desktop";
-    documents = "${config.home.homeDirectory}/Documents";
-    download = "${config.home.homeDirectory}/Downloads";
-    videos = "${config.home.homeDirectory}/Videos";
+    desktop = null;
+    documents = "${config.home.homeDirectory}/documents";
+    download = "${config.home.homeDirectory}/downloads";
+    pictures = "${config.home.homeDirectory}/pictures";
+    videos = "${config.home.homeDirectory}/videos";
 
     extraConfig = {
-      XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
+      XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/src";
     };
   };
 }
