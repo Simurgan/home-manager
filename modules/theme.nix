@@ -1,24 +1,12 @@
 { pkgs, ... }:
 
-let
-  ayuGraphiteGtk = pkgs.stdenvNoCC.mkDerivation {
-    pname = "graphite-ayu-dark";
-    version = "1.0";
-    src = ../themes/Graphite-Ayu-Dark;
-
-    installPhase = ''
-      mkdir -p $out/share/themes
-      cp -r . $out/share/themes/Graphite-Ayu-Dark
-    '';
-  };
-in
 {
   gtk = {
     enable = true;
 
     theme = {
-      package = ayuGraphiteGtk;
-      name = "Graphite-Ayu-Dark";
+      package = pkgs.gruvbox-gtk-theme;
+      name = "Gruvbox-Dark";
     };
 
     iconTheme = {
