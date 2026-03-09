@@ -11,4 +11,10 @@
   home.sessionPath = [
     "$HOME/.local/bin"
   ];
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    }; 
+  };
 }

@@ -8,9 +8,12 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    astal.url = "github:Aylur/astal";
+    ags.url = "github:Aylur/ags";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ags, astal, ... }:
     let
       mkHome = { system, username, homeDirectory, extraModules ? [ ] }:
         home-manager.lib.homeManagerConfiguration {
@@ -18,6 +21,8 @@
             inherit system;
             config.allowUnfree = false;
           };
+
+          extraSpecialArgs = { inherit inputs; };
 
           modules = [
             ./home.nix

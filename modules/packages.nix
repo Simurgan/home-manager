@@ -14,5 +14,9 @@
     starship
     neovim
     yazi
+
+    fuzzel
+    brightnessctl
+    playerctl
   ];
 }
