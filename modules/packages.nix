@@ -18,5 +18,8 @@
     fuzzel
     brightnessctl
     playerctl
+
+    go
+    nodejs
   ];
 }
